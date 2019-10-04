@@ -1,2 +1,2 @@
-# Module1
+# StringManipulation
 My first repository on GitHub
