@@ -1,0 +1,32 @@
+DECLARE A1 As String = ""
+DECLARE A2 As String = ""
+DECLARE A3 As String = ""
+DECLARE A4 As String = ""
+DECLARE X As String = ""
+DECLARE Y As String = ""
+DECLARE N As Integer = 0
+
+A1 = ""
+A2 = ""
+A3 = ""
+A4 = ""
+X = ""
+Y = ""
+N = 0
+
+Output "Enter string composed of three words: "
+Input A1 
+
+X = Locate(A1, " ")
+A2 = MID(A1, 1, X - 1)
+
+Y = Locate((InStr(A1, " ") + 1), A1, " ")
+A3 = MID(A1, X + 1, (Y - X - 1))
+
+N = LEN(A1)
+A4 = MID(A1, (N - X + 2), N)
+
+Output "First Word: ", A2
+Output "Second Word: ", A3
+Output "Third Word: ", A4
+      
