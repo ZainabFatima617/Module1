@@ -1,0 +1,19 @@
+DECLARE Str1 As String
+DECLARE myChar As String
+DECLARE Counter As Integer 
+DECLARE FinalStr As String 
+
+Str1 = ""
+myChar = ""
+Counter = 0
+FinalStr = ""
+
+Output "Enter String to inverse: "
+Input Str1 
+
+For Counter = LEN(Str1) To 1 Step -1
+    myChar = MID(Str1, Counter, 1)
+    FinalStr = FinalStr & myChar
+EndFor
+
+Output "Final String is: ", FinalStr
