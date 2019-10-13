@@ -1,0 +1,29 @@
+DECLARE A1 As String
+DECLARE A2 As String
+DECLARE A3 As String
+DECLARE X As Integer
+DECLARE FN As String
+DECLARE LN As String
+
+A1 = ""
+A2 = ""
+A3 = ""
+X = 0
+FN = ""
+LN = ""
+
+Output "Enter the First Name: "
+Input A1
+
+Output "Enter the Second Name: ")
+Input A2 
+
+X = LOCATE(A1, " ")
+FN = LEFT(A1, (X - 1))
+
+X = LOCATE(A2, " ")
+LN = RIGHT(A2, LEN(A2) - X)
+
+A3 = FN + " " + LN
+
+Output "Final String is: ", A3
