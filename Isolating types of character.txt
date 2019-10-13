@@ -1,0 +1,35 @@
+DECLARE Str1 As String 
+DECLARE myChar As String 
+DECLARE FinalStr As String 
+DECLARE Numbers As String 
+DECLARE Counter As Integer 
+DECLARE Letters As String 
+DECLARE Specials As String 
+
+Str1 = ""
+myChar = ""
+FinalStr = ""
+Numbers = ""
+Counter = 0
+Letters = ""
+Specials = ""
+
+Output "Enter String Consisting of Numbers, Letters and Special Characters: "
+Input Str1
+
+For Counter = 1 To LEN(Str1)
+    myChar = MID(Str1, Counter, 1)
+    If ASC(UPPER(myChar)) >= 65 And ASC(UPPER(myChar)) <= 91 
+      Then
+        Letters = Letters & myChar
+    ElseIf ASC(myChar) >= 48 And ASC(myChar) <= 57
+      Then
+        Numbers = Numbers & myChar
+     Else : Specials = Specials & myChar
+     End If
+ENDFor
+
+Output "Letters in the String are: ", Letters
+Output "Numbers in the String are: ", Numbers
+Output "Specials in the String are: ", Specials
+      
