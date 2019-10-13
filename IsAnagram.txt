@@ -1,0 +1,51 @@
+DECLARE Str1 As String
+DECLARE Str2 As String=
+DECLARE Counter1 As Integer
+DECLARE Counter2 As Integer
+DECLARE Char1 As String 
+DECLARE myChar As String 
+DECLARE IsAnagram As Boolean
+DECLARE NewStr2 As String 
+
+Str1 = ""
+Str2 = ""
+Counter1 = 0
+Counter2 = 0
+Char1 = ""
+myChar = "" 
+IsAnagram = TRUE
+NewStr2 = ""
+
+Output "Enter String 1 to check Anagram: "
+Input Str1 
+
+Output "Enter String 2 to check Anagram: "
+Input Str2 
+
+If LEN(Str1) <> LEN(Str2) 
+  Then
+    Output "It is not an Anagram "
+    Input
+Else
+End If
+
+NewStr2 = UPPER(Str2)
+IsAnagram = True
+For Counter1 = 1 To LEN(Str1)
+    Char1 = MID(Str1, Counter1, 1)
+    myChar = Locate(NewStr2, UPPER(Char1))
+    If myChar > 0 
+      Then
+        IsAnagram = True
+     Else
+        IsAnagram = False
+        Exit For
+     End If
+End For
+
+If IsAnagram = True 
+  Then
+    Output "The strings are Anagram."
+    Input
+Else : Output "The Strings are not Anagram."
+End If
