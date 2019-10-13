@@ -1,0 +1,27 @@
+DECLARE myStr As String 
+DECLARE Counter As Integer
+DECLARE NextChar As String
+DECLARE Character As String
+DECLARE FinalStr As String 
+
+myStr = ""
+Counter = 0
+NextChar = ""
+Character = ""
+FinalStr = ""
+
+Output "Enter String to remove characters: "
+Input myStr 
+
+Output "Enter Character to remove: "
+Input Character
+
+For Counter = 1 To LEN(myStr)
+    NextChar = MID(myStr, Counter, 1)
+    If NextChar <> Character 
+       Then
+         FinalStr = FinalStr & NextChar
+    End If
+EndFor
+
+Output "Final String is: ", FinalStr
