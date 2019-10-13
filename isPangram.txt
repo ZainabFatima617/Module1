@@ -1,0 +1,29 @@
+DECLARE Str1 as String
+DECLARE myAlpha as String
+DECLARE isPangram as Boolean
+DECLARE myChar as Character
+
+Str1 = ""
+myAlpha = ""
+isPangram = TRUE
+myChar = 
+
+Output "Enter String to check whether it is a pangram or not: "
+Input Str1
+
+isPangram = TRUE
+Str1 = UPPER(Str1)
+For ASC = 65 To 90
+    myAlpha = CHAR(ASC)
+    myChar = LOCATE(Str1, myAlpha)
+    If myChar >= 1 
+      Then
+        isPangram = True
+      Else
+        isPangram = False
+        Exit For
+    EndIf
+EndFor
+
+Output "The string is Pangram: ", isPangram
+ 
