@@ -1,0 +1,33 @@
+DECLARE CharCount As Integer
+DECLARE Counter As Integer
+DECLARE WCount As Integer
+DECLARE myStr As String
+DECLARE myChar As String
+Const Character1 As String = " "
+Const Character2 As String = "."
+
+CharCount = 0
+myChar = ""
+Counter = 0
+WCount = 0
+myStr = ""
+
+Output "Enter sentence to count words:"
+Input myStr 
+
+For Counter = 1 To LEN(myStr)
+   myChar = MID(myStr, Counter, 1)
+   If myChar = Character1 
+     Then
+       CharCount = CharCount + 1
+       If myChar = Character2 
+         Then
+           CharCount = CharCount + 1
+       End If
+  End If
+Next
+
+WCount = CharCount + 1
+
+
+Output "Number of words in the above sentence: ", WCount
