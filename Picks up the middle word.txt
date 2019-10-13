@@ -1,0 +1,18 @@
+DECLARE A1 As String
+DECLARE X As Integer
+DECLARE A2 As String
+DECLARE Y As Integer
+
+A1 = ""
+X = 0
+A2 = ""
+Y = 0
+
+Outut "Enter String: "
+Input A1 
+
+X = Locate(A1, " ")
+Y = Locate(X + 1, A1, " ")
+A2 = MID(A1, (X + 1), (Y - X - 1))
+
+Output "Middle word of the string: ", A2
